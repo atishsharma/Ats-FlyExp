@@ -47,7 +47,7 @@
     <PreferenceScreen android:title="@string/github" >
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="http://github.com/atishsharma/flyexp" >
+            android:data="http://github.com/atishsharma/Ats-FlyExp" >
         </intent>
     </PreferenceScreen>
 </PreferenceScreen>
