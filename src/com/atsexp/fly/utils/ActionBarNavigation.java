@@ -95,6 +95,7 @@ public class ActionBarNavigation {
 			});
 
 			t2.setOnLongClickListener(new View.OnLongClickListener() {
+				@Override
 				public boolean onLongClick(View view) {
 					String dir1 = (String) view.getTag();
 					SimpleUtils.savetoClipBoard(mActivity, dir1);
@@ -105,10 +106,11 @@ public class ActionBarNavigation {
 			mView.addView(fv1);
 			mView.addView(t2);
 			scrolltext.postDelayed(new Runnable() {
+				@Override
 				public void run() {
 					HorizontalScrollView hv = (HorizontalScrollView) mActivity
 							.findViewById(R.id.scroll_text);
-					hv.fullScroll(HorizontalScrollView.FOCUS_RIGHT);
+					hv.fullScroll(View.FOCUS_RIGHT);
 				}
 			}, 100L);
 		}

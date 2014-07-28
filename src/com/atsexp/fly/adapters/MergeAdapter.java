@@ -39,6 +39,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 	 * @param position
 	 *            Position of the item whose data we want
 	 */
+	@Override
 	public Object getItem(int position) {
 		for (ListAdapter piece : pieces) {
 			int size = piece.getCount();
@@ -80,6 +81,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 	/**
 	 * How many items are in the data set represented by this Adapter.
 	 */
+	@Override
 	public int getCount() {
 		int total = 0;
 
@@ -177,6 +179,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 	 * @param parent
 	 *            ViewGroup containing the returned View
 	 */
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		for (ListAdapter piece : pieces) {
 			int size = piece.getCount();
@@ -204,6 +207,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 	 * @param position
 	 *            Position of the item whose data we want
 	 */
+	@Override
 	public long getItemId(int position) {
 		for (ListAdapter piece : pieces) {
 			int size = piece.getCount();
@@ -218,6 +222,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 		return (-1);
 	}
 
+	@Override
 	public int getPositionForSection(int section) {
 		int position = 0;
 
@@ -244,6 +249,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 		return (0);
 	}
 
+	@Override
 	public int getSectionForPosition(int position) {
 		int section = 0;
 
@@ -273,6 +279,7 @@ public class MergeAdapter extends BaseAdapter implements SectionIndexer {
 		return (0);
 	}
 
+	@Override
 	public Object[] getSections() {
 		ArrayList<Object> sections = new ArrayList<Object>();
 

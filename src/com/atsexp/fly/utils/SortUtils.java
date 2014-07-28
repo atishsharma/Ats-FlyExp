@@ -39,7 +39,7 @@ public class SortUtils {
 				if (new File(current + "/" + a).isDirectory())
 					content.add(index++, a);
 				else
-					content.add((String) a);
+					content.add(a);
 			}
 			break;
 		case SORT_TYPE:

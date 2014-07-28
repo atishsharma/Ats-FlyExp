@@ -45,6 +45,7 @@ public final class ZipFilesDialog extends DialogFragment {
 		b.setView(inputf);
 		b.setPositiveButton(getString(R.string.ok),
 				new DialogInterface.OnClickListener() {
+					@Override
 					public void onClick(DialogInterface dialog, int whichButton) {
 						String newpath = inputf.getText().toString();
 						File file = new File(newpath);

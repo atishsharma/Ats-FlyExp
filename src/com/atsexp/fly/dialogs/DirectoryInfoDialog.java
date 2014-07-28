@@ -25,6 +25,7 @@ public final class DirectoryInfoDialog extends DialogFragment {
 	private static File mFile;
 	private View mView;
 
+	@Override
 	public Dialog onCreateDialog(final Bundle savedInstanceState) {
 		final Activity activity = this.getActivity();
 		mView = activity.getLayoutInflater().inflate(

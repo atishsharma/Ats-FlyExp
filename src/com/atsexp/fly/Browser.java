@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 import org.apache.commons.io.FilenameUtils;
+
 import com.atsexp.fly.adapters.BookmarksAdapter;
 import com.atsexp.fly.adapters.BrowserListAdapter;
 import com.atsexp.fly.adapters.DrawerListAdapter;
@@ -25,6 +26,7 @@ import com.atsexp.fly.utils.ClipBoard;
 import com.atsexp.fly.utils.SimpleUtils;
 import com.atsexp.fly.utils.ActionBarNavigation.OnNavigateListener;
 import com.atsexp.fly.R;
+
 import android.app.ActionBar;
 import android.app.DialogFragment;
 import android.app.Fragment;
@@ -36,6 +38,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.os.FileObserver;
 import android.os.Handler;
+import android.provider.BaseColumns;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -289,7 +292,7 @@ public final class Browser extends ThemableActivity implements OnEventListener,
 					if (mDrawerLayout.isDrawerOpen(mDrawer))
 						mDrawerLayout.closeDrawer(mDrawer);
 
-					if (mBookmarksCursor.moveToPosition((int) position)) {
+					if (mBookmarksCursor.moveToPosition(position)) {
 						File file = new File(mBookmarksCursor
 								.getString(mBookmarksCursor
 										.getColumnIndex(Bookmarks.PATH)));
@@ -462,7 +465,7 @@ public final class Browser extends ThemableActivity implements OnEventListener,
 	private Cursor getBookmarksCursor() {
 		return getContentResolver().query(
 				Bookmarks.CONTENT_URI,
-				new String[] { Bookmarks._ID, Bookmarks.NAME, Bookmarks.PATH,
+				new String[] { BaseColumns._ID, Bookmarks.NAME, Bookmarks.PATH,
 						Bookmarks.CHECKED }, null, null, null);
 	}
 

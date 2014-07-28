@@ -71,6 +71,7 @@ public enum IconPreview {
 		};
 
 		pool.submit(new Runnable() {
+			@Override
 			public void run() {
 				final Bitmap bmp = getPreview(uri);
 				Message message = Message.obtain();

@@ -10,6 +10,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -69,7 +70,7 @@ public class BookmarksAdapter extends SimpleCursorAdapter {
 
 	public void createBookmark(File file) {
 		Cursor c = mContext.getContentResolver().query(Bookmarks.CONTENT_URI,
-				new String[] { Bookmarks._ID }, Bookmarks.PATH + "=?",
+				new String[] { BaseColumns._ID }, Bookmarks.PATH + "=?",
 				new String[] { file.getPath() }, null);
 
 		if (!c.moveToFirst()) {

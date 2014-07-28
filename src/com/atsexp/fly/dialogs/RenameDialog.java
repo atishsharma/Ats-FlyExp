@@ -38,6 +38,7 @@ public final class RenameDialog extends DialogFragment {
 
 		b.setPositiveButton(getString(R.string.ok),
 				new DialogInterface.OnClickListener() {
+					@Override
 					public void onClick(DialogInterface dialog, int whichButton) {
 						String newname = inputf.getText().toString();
 

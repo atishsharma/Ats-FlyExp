@@ -19,6 +19,7 @@ public class DrawerListAdapter extends BaseAdapter {
 				R.array.drawerTitles_array);
 	}
 
+	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 

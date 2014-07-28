@@ -63,9 +63,9 @@ public class BrowserListAdapter extends ArrayAdapter<String> {
 		}
 
 		if (Settings.mListAppearance > 0) {
-			mViewHolder.dateview.setVisibility(TextView.VISIBLE);
+			mViewHolder.dateview.setVisibility(View.VISIBLE);
 		} else {
-			mViewHolder.dateview.setVisibility(TextView.GONE);
+			mViewHolder.dateview.setVisibility(View.GONE);
 		}
 
 		if (Settings.showthumbnail)
